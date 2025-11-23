@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <style>
+    html,
+    body {
+
+      scroll-behavior: smooth;
+      margin: 0;
+
+    }
+
+    @keyframes typing-fixed {
+      from {
+        clip-path: inset(0 100% 0 0);
+      }
+
+      to {
+        clip-path: inset(0 0 0 0);
+      }
+    }
+
+    @keyframes blink {
+      50% {
+        border-color: transparent;
+      }
+    }
+
+    .animate-typing-fixed {
+      display: inline-block;
+      animation: typing-fixed 3s steps(30) 1s forwards, blink .6s step-end infinite alternate;
+    }
+
+
+    @keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+
+      100% {
+        transform: translateX(calc(-50%));
+      }
+    }
+
+
+    .group {
+      display: inline-flex;
+      animation: scroll 20s linear infinite;
+    }
+
+    .group:hover {
+      animation-play-state: paused;
+    }
+  </style>
+</head>
+
+<body class="bg-black">
+  <nav class="fixed top-6 left-1/2 -translate-x-1/2 w-[700px] md:w-[600px] sm:w-[400px] max-[640px]:w-[90%]
+  bg-white/10 backdrop-blur-md shadow-md p-2 rounded-full border border-white/10 z-50 transition-all duration-300">
+
+    <div class="flex items-center justify-center relative max-[640px]:justify-between">
+      <h1 class="text-white font-bold text-sm hidden max-[640px]:flex ">Kenneth</h1>
+
+
+      <button id="menu-btn"
+        class="absolute right-3 text-white text-2xl hidden max-[640px]:block focus:outline-none transition duration-300 hover:text-red-500">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+
+
+      <ul id="menu" class="flex justify-center gap-x-20 lg:gap-x-14 md:gap-x-10 sm:gap-x-6 font-semibold text-white text-lg 
+      lg:text-base sm:text-sm max-[640px]:hidden max-[640px]:absolute max-[640px]:flex-col max-[640px]:top-[70px]
+      max-[640px]:left-1/2 max-[640px]:-translate-x-1/2 max-[640px]:bg-white/10 max-[640px]:backdrop-blur-lg 
+      max-[640px]:rounded-2xl max-[640px]:w-[85%] max-[640px]:p-5 max-[640px]:border max-[640px]:border-white/10 
+      max-[640px]:shadow-lg max-[640px]:space-y-4 max-[640px]:text-center transition-all duration-300">
+
+        <li><a href="#home" class="block py-2 hover:text-red-500 transition duration-300">Home</a></li>
+        <li><a href="#about" class="block py-2 hover:text-red-500 transition duration-300">About</a></li>
+        <li><a href="#skills" class="block py-2 hover:text-red-500 transition duration-300">Skills</a></li>
+        <li><a href="#projects" class="block py-2 hover:text-red-500 transition duration-300">Projects</a></li>
+        <li><a href="#contact" class="block py-2 hover:text-red-500 transition duration-300">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <div id="home"
+    class="flex items-center justify-center gap-x-100 h-[110vh] bg-[linear-gradient(130deg,#0a0a0a_0%,#1a1a1a_100%)] rounded-b-[120px] relative z-10 border-1 border-white/10 shadow-xl max-[1730px]:gap-x-60 max-[1550px]:gap-x-40 max-[1280px]:flex-col-reverse  max-[1280px]:h-[160vh] max-[640px]:h-[160vh] ">
+
+    <div class="text-left px-5 mb-[100px] max-[1280px]:text-center">
+      <h1 data-aos="fade-up" class="text-[50px] max-[1550px]:text-[40px] max-[640px]:text-2xl font-bold text-white ">
+        <span
+          class="relative inline-block overflow-hidden whitespace-nowrap border-r-4 border-red-600 pr-2 animate-typing-fixed">
+          Hi, I'm <span class="text-red-600">Kenneth Brian Galletes</span>
+        </span>
+      </h1>
+      <h2 class="text-4xl max-[640px]:text-lg font-semibold mb-4 text-red-600 overflow-hidden whitespace-nowrap">
+        Web Developer
+      </h2>
+
+
+      <p class="text-xl w-139 h-30 md:text-lg sm:text-base max-[640px]:text-sm max-[640px]:w-100 text-gray-300 mb-2 ">
+        I’m
+        a passionate Web Developer who loves creating clean, responsive, and
+        user-friendly websites. I enjoy turning ideas into functional designs
+        and continuously improving my skills to build projects that make a
+        positive impact.</p>
+      <div class="w-auto mb-5 flex gap-x-2  max-[1280px]:justify-center ">
+        <a href>
+          <i class="fa-brands fa-square-github text-red-600 fa-3x hover:text-neutral-500  transition duration-300"></i>
+        </a>
+        <a href>
+          <i class="fa-brands fa-linkedin text-red-600 fa-3x hover:text-neutral-500  transition duration-300"></i>
+        </a>
+        <a href>
+          <i class="fa-brands fa-square-upwork text-red-600 fa-3x hover:text-neutral-500  transition duration-300"></i>
+        </a>
+        <a href>
+          <i
+            class="fa-brands fa-square-instagram text-red-600 fa-3x hover:text-neutral-500 transition duration-300"></i>
+        </a>
+
+      </div>
+      <a href="#projects"
+        class="inline-block bg-red-600 hover:bg-neutral-700  text-white font-bold py-3 px-6 rounded-md shadow-lg transition duration-300">
+        View My Work
+      </a>
+    </div>
+
+    <div data-aos="zoom-in-up"
+      class="w-130 h-130 mb-[100px] shadow-[0_0px_60px_-20px_rgba(255,0,0,0.5)] border border-black/30 rounded-full bg-[radial-gradient(circle_at_center,#ff0000,#000000)] overflow-hidden flex items-center justify-center max-[1550px]:w-120 max-[1550px]:h-120 max-[1024px]:h-100 max-[1024px]:w-100 max-[640px]:w-80 max-[640px]:h-80 ">
+      <img src="ken.png" alt="profile" class="w-full h-full object-cover">
+    </div>
+
+  </div>
+
+  <!-- ABOUT PAGE -->
+  <div id="about"
+    class="min-h-screen -mt-[100px] flex flex-col items-center justify-center gap-y-16 bg-[linear-gradient(130deg,#1a1a1a_0%,#0a0a0a_100%)] text-white px-6 py-20">
+
+    <h1 data-aos="fade-up"
+      class="text-center text-[50px] font-bold mb-10 max-[1024px]:text-[40px] max-[768px]:text-[32px] max-[640px]:mt-15">
+      <i class="fa-solid fa-caret-left text-red-600 fa-lg"></i> About Me
+    </h1>
+
+
+    <div class="flex justify-center items-center gap-x-16 max-[1280px]:flex-col-reverse max-[1280px]:gap-y-12">
+
+      <div data-aos="fade-right"
+        class="w-[450px] h-[400px] shadow-[0_0px_60px_-20px_rgba(255,0,0,0.5)] border border-black/30 rounded-4xl bg-[radial-gradient(circle_at_center,#ff0000,#000000)] overflow-hidden flex items-center justify-center max-[1024px]:w-[350px] max-[768px]:w-[280px] max-[768px]:h-[280px]">
+        <img src="ken.png" alt="profile" class="w-full h-full object-cover" />
+      </div>
+
+      <div class="max-w-[700px] max-[1280px]:text-center max-[768px]:max-w-[90%]">
+        <h2 class="text-[45px] font-bold mb-4 max-[1024px]:text-[36px] max-[768px]:text-[28px]">
+          Who I am
+        </h2>
+        <p class="text-[22px] leading-relaxed text-gray-300 max-[1024px]:text-[20px] max-[768px]:text-[18px]">
+          I’m a detail-oriented and creative
+          <span class="text-red-600">Web Developer</span> who enjoys turning
+          ideas into interactive and visually appealing websites. I value clean
+          design, usability, and performance in every project I create. Beyond
+          coding, I’m passionate about learning new technologies and improving
+          my craft to deliver better digital experiences. My goal is to build
+          modern web solutions that combine functionality with great user
+          experience.
+        </p>
+        <div class="flex gap-4 mt-6 max-[1280px]:justify-center">
+          <button onclick="openVideoPopup()"
+            class="bg-red-600 px-6 py-3 rounded-xl font-semibold hover:bg-red-700 transition">
+            <i class="fa-solid fa-play"></i>
+          </button>
+
+          <button onclick="openCvPopup()"
+            class="bg-red-600 px-6 py-3 rounded-xl font-semibold hover:bg-red-700 transition">
+            View CV
+          </button>
+        </div>
+
+      </div>
+
+      <!-- VIDEO POPUP -->
+      <div id="videoPopup" class="fixed inset-0 bg-black/80 hidden z-[9999] 
+     flex items-center justify-center">
+
+        <div class="bg-[#111] p-4 rounded-2xl shadow-lg w-[90%] max-w-[400px]">
+          <div class="flex justify-end mb-2">
+            <button onclick="closeVideoPopup()" class="text-white text-2xl">X</button>
+          </div>
+
+          <video controls class="w-full rounded-xl">
+            <source src="vid-me.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+
+
+      <!-- CV POPUP -->
+      <div id="cvPopup" class="fixed inset-0 bg-black/80 hidden z-[9999] 
+     flex items-center justify-center">
+
+        <div class="bg-[#111] p-4 rounded-2xl shadow-lg w-[90%] max-w-[600px]">
+          <div class="flex justify-end mb-2">
+            <button onclick="closeCvPopup()" class="text-white text-2xl">X</button>
+          </div>
+
+          <img src="ken-cv.png" class="w-full rounded-xl" />
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+
+
+  <!-- SKILLS PAGE -->
+  <div id="skills"
+    class="min-h-screen bg-[linear-gradient(130deg,#0a0a0a_0%,#1a1a1a_100%)] text-white flex justify-center flex-col items-center py-20 px-5">
+
+    <!-- CARD - TWO COLUMNS -->
+    <div class="grid grid-cols-2 gap-20 max-[1200px]:grid-cols-1">
+
+      <!-- LEFT CARD — TECH STACK -->
+      <div data-aos="fade-right"
+        class="bg-[#FFFFFF]/8 border border-white/50 rounded-2xl p-14 w-[600px] max-[900px]:w-full">
+
+        <h2 class="text-[35px] font-semibold mb-12">
+          <i class="fa-solid fa-caret-left text-red-600 mr-1"></i> Tech Stack
+        </h2>
+
+        <div class="grid grid-cols-4 gap-12 place-items-center max-[1024px]:grid-cols-3 max-[640px]:grid-cols-2">
+
+          <div class="flex flex-col items-center">
+            <img src="html.png" class="h-24 w-24 mb-2" />
+          </div>
+
+          <div class="flex flex-col items-center">
+            <img src="css.png" class="h-24 w-24 mb-2" />
+          </div>
+
+          <div class="flex flex-col items-center">
+            <img src="javascript.png" class="h-24 w-24 mb-2" />
+          </div>
+
+          <div class="flex flex-col items-center">
+            <img src="php.png" class="h-24 w-24 mb-2" />
+          </div>
+
+          <div class="flex flex-col items-center">
+            <img src="tailwind.png" class="h-24 w-24 mb-2" />
+          </div>
+
+          <div class="flex flex-col items-center">
+            <img src="bootstrap.png" class="h-24 w-24 mb-2" />
+          </div>
+
+          <div class="flex flex-col items-center">
+            <img src="react.png" class="h-24 w-24 mb-2" />
+          </div>
+
+          <div class="flex flex-col items-center">
+            <img src="mysql.png" class="h-24 w-24 mb-2" />
+          </div>
+
+        </div>
+      </div>
+
+      <!-- RIGHT CARD — SOFTWARE TOOLS -->
+      <div data-aos="fade-left"
+        class="bg-[#FFFFFF]/8 border border-white/50  rounded-2xl p-14 w-[600px] max-[900px]:w-full ">
+
+        <h2 class="text-[35px] font-semibold mb-12">
+          <i class="fa-solid fa-caret-left text-red-600 mr-1"></i> Software Tools
+        </h2>
+
+        <div class="grid grid-cols-4 gap-12 place-items-center max-[1024px]:grid-cols-3 max-[640px]:grid-cols-2">
+
+          <div class="flex flex-col items-center">
+            <img src="photoshop.png" class="h-24 w-24 mb-2" />
+          </div>
+
+          <div class="flex flex-col items-center">
+            <img src="illustrator.png" class="h-24 w-24 mb-2" />
+          </div>
+
+          <div class="flex flex-col items-center">
+            <img src="figma.png" class="h-24 w-24 mb-2" />
+          </div>
+
+          <div class="flex flex-col items-center">
+            <img src="canva.png" class="h-24 w-24 mb-2" />
+          </div>
+
+          <div class="flex flex-col items-center">
+            <img src="github.png" class="h-24 w-24 mb-2" />
+          </div>
+
+          <div class="flex flex-col items-center">
+            <img src="git.png" class="h-24 w-24 mb-2" />
+          </div>
+
+          <div class="flex flex-col items-center">
+            <img src="vscode.png" class="h-24 w-24 mb-2" />
+          </div>
+
+          <div class="flex flex-col items-center">
+            <img src="xampp.png" class="h-24 w-24 mb-2" />
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <!-- PROJECTS PAGE -->
+  <div id="projects" class="min-h-[160dvh] bg-[linear-gradient(130deg,#1a1a1a_0%,#0a0a0a_100%)] text-white px-6 py-16">
+
+    <!-- Title -->
+    <h1 data-aos="fade-up" class="text-[50px] md:text-[60px] font-bold text-center md:text-left md:ml-20 leading-tight">
+      <i class="fa-solid fa-caret-left text-red-600 text-[45px] md:text-[60px]"></i>FEATURED PROJECTS
+    </h1>
+
+    <p class="text-gray-300 text-center md:text-left md:ml-28 mt-2 text-[18px] max-w-[600px]">
+      Selected projects showcasing my expertise in web development, design, and interactive user experiences.
+    </p>
+
+    <!-- Projects Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 mt-14 justify-items-center max-w-[90%] mx-auto gap-12">
+
+      <!-- PROJ 1 -->
+      <div data-aos="zoom-in-right"
+        class="flex flex-col bg-[#3B3B3B] rounded-lg overflow-hidden w-full max-w-[400px] transform hover:scale-[1.05] hover:shadow-2xl transition duration-700 ease-in-out">
+        <video src="coffee-shop.mp4" autoplay loop muted playsinline
+          class="w-full h-[250px] md:h-[300px] object-cover"></video>
+        <div class="p-6">
+          <h2 class="text-2xl md:text-3xl font-bold mb-3">Coffee Shop Online Ordering</h2>
+          <p class="text-gray-300 text-[16px] md:text-[17px] leading-relaxed">
+            A responsive web project allowing customers to browse drinks, customize orders, and place them online
+            easily.
+          </p>
+        </div>
+      </div>
+
+      <!-- PROJ 2 -->
+      <div data-aos="zoom-in"
+        class="flex flex-col bg-[#3B3B3B] rounded-lg overflow-hidden w-full max-w-[400px] transform hover:scale-[1.05] hover:shadow-2xl transition-transform transition-shadow duration-700 ease-in-out">
+        <video src="coffee-webite.mp4" autoplay loop muted playsinline
+          class="w-full h-[250px] md:h-[300px] object-cover"></video>
+        <div class="p-6">
+          <h2 class="text-2xl md:text-3xl font-bold mb-3">Sip & Snip Website</h2>
+          <p class="text-gray-300 text-[16px] md:text-[17px] leading-relaxed">
+            Combining a coffee experience with professional barber services, offering customers a fresh cut and brew in
+            one place.
+          </p>
+        </div>
+      </div>
+
+      <!-- PROJ 3 -->
+      <div data-aos="zoom-in-left"
+        class="flex flex-col bg-[#3B3B3B] rounded-lg overflow-hidden w-full max-w-[400px] transform hover:scale-[1.05] hover:shadow-2xl transition-transform transition-shadow duration-700 ease-in-out">
+        <video src="art-gallery.mp4" autoplay loop muted playsinline
+          class="w-full h-[250px] md:h-[300px] object-cover"></video>
+        <div class="p-6">
+          <h2 class="text-2xl md:text-3xl font-bold mb-3">Art Gallery Showcase</h2>
+          <p class="text-gray-300 text-[16px] md:text-[17px] leading-relaxed">
+            Showcasing the creativity and artworks of OMBOK Art Gallery with an engaging and modern web design.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Design Logos/Portfolio Section -->
+    <h1 class="font-bold text-center mt-20 mb-10" style="font-size: clamp(32px, 5vw, 60px);">
+      <i class="fa-solid fa-caret-left text-red-600" style="font-size: clamp(28px, 4vw, 60px);"></i>
+      Design & Creative Works
+    </h1>
+
+    <div class=" overflow-hidden relative py-4 ">
+      <div class="flex whitespace-nowrap scrolling overflow-x-hidden">
+
+
+        <div class="group flex " >
+          <img src="proj1.jpg " data-description="LATTE MOOD ACTIVATED. 🍂 Designed this dynamic coffee ad in Photoshop, highlighting the rich flavors and limited-time price of the Spice Latte. Creating a vibrant, warm visual to match that cozy autumn feeling."
+            class="w-28 sm:w-40 md:w-56 lg:w-72 mx-3 rounded-lg opacity-80 hover:opacity-100 cursor-pointer flex-none basis-[5em]">
+          <img src="proj2.jpg " data-description="The Brain is a Storyteller. 🧠 I designed this powerful, high-contrast poster in Photoshop, using texture and deep red tones to emphasize the central concept and create a visually arresting look."
+            class="w-28 sm:w-40 md:w-56 lg:w-72 mx-3 rounded-lg opacity-80 hover:opacity-100 cursor-pointer flex-none basis-[5em]">
+          <img src="proj3.png" data-description="Crafted a complete brand identity guide for Lumè Organics. This board establishes the logo, a soothing color palette (including $\text{\#a8bfa0}$), key typography, and mood imagery, all inspired by Nature's quiet push forward."
+            class="w-28 sm:w-40 md:w-56 lg:w-72 mx-3 rounded-lg opacity-80 hover:opacity-100 cursor-pointer flex-none basis-[5em]">
+          <img src="proj4.png" data-description="Showing the full range of the Lumè Organics identity! This guide, created in Photoshop, showcases the logo in its horizontal, vertical, and stacked forms, plus various badge applications and the core color palette."
+            class="w-28 sm:w-40 md:w-56 lg:w-72 mx-3 rounded-lg opacity-80 hover:opacity-100 cursor-pointer flex-none basis-[5em]">
+          <img src="proj5.png" data-description="My latest UI/UX project: A Car Rental App concept designed entirely in Figma. I focused on a sleek dark-mode aesthetic with intuitive flows for browsing cars, checking availability, and managing payment history for a premium user experience."
+            class="w-28 sm:w-40 md:w-56 lg:w-72 mx-3 rounded-lg opacity-80 hover:opacity-100 cursor-pointer flex-none basis-[5em]">
+          <img src="proj6.png" data-description="JERSEY DESIGN collection completed in Photoshop! I created these five distinct concepts for different academic departments, focusing on incorporating unique mascots, complex patterns, and strong color themes into each uniform."
+            class="w-28 sm:w-40 md:w-56 lg:w-72 mx-3 rounded-lg opacity-80 hover:opacity-100 cursor-pointer flex-none basis-[5em]">
+          <img src="proj7.png" data-description="Diving into the Y2K DESIGN aesthetic with a dark, gothic twist. I created this set of t-shirt graphics and mockups in Photoshop, focusing on tribal-inspired patterns and skeletal imagery to capture that edgy, nostalgic vibe."
+            class="w-28 sm:w-40 md:w-56 lg:w-72 mx-3 rounded-lg opacity-80 hover:opacity-100 cursor-pointer flex-none basis-[5em]">
+
+          <img src="proj1.jpg " data-description="LATTE MOOD ACTIVATED. 🍂 Designed this dynamic coffee ad in Photoshop, highlighting the rich flavors and limited-time price of the Spice Latte. Creating a vibrant, warm visual to match that cozy autumn feeling."
+            class="w-28 sm:w-40 md:w-56 lg:w-72 mx-3 rounded-lg opacity-80 hover:opacity-100 cursor-pointer flex-none basis-[5em]">
+          <img src="proj2.jpg " data-description="The Brain is a Storyteller. 🧠 I designed this powerful, high-contrast poster in Photoshop, using texture and deep red tones to emphasize the central concept and create a visually arresting look."
+            class="w-28 sm:w-40 md:w-56 lg:w-72 mx-3 rounded-lg opacity-80 hover:opacity-100 cursor-pointer flex-none basis-[5em]">
+          <img src="proj3.png" data-description="Crafted a complete brand identity guide for Lumè Organics. This board establishes the logo, a soothing color palette (including $\text{\#a8bfa0}$), key typography, and mood imagery, all inspired by Nature's quiet push forward."
+            class="w-28 sm:w-40 md:w-56 lg:w-72 mx-3 rounded-lg opacity-80 hover:opacity-100 cursor-pointer flex-none basis-[5em]">
+          <img src="proj4.png" data-description="Showing the full range of the Lumè Organics identity! This guide, created in Photoshop, showcases the logo in its horizontal, vertical, and stacked forms, plus various badge applications and the core color palette."
+            class="w-28 sm:w-40 md:w-56 lg:w-72 mx-3 rounded-lg opacity-80 hover:opacity-100 cursor-pointer flex-none basis-[5em]">
+          <img src="proj5.png" data-description="My latest UI/UX project: A Car Rental App concept designed entirely in Figma. I focused on a sleek dark-mode aesthetic with intuitive flows for browsing cars, checking availability, and managing payment history for a premium user experience."
+            class="w-28 sm:w-40 md:w-56 lg:w-72 mx-3 rounded-lg opacity-80 hover:opacity-100 cursor-pointer flex-none basis-[5em]">
+          <img src="proj6.png" data-description="JERSEY DESIGN collection completed in Photoshop! I created these five distinct concepts for different academic departments, focusing on incorporating unique mascots, complex patterns, and strong color themes into each uniform."
+            class="w-28 sm:w-40 md:w-56 lg:w-72 mx-3 rounded-lg opacity-80 hover:opacity-100 cursor-pointer flex-none basis-[5em]">
+          <img src="proj7.png" data-description="Diving into the Y2K DESIGN aesthetic with a dark, gothic twist. I created this set of t-shirt graphics and mockups in Photoshop, focusing on tribal-inspired patterns and skeletal imagery to capture that edgy, nostalgic vibe."
+            class="w-28 sm:w-40 md:w-56 lg:w-72 mx-3 rounded-lg opacity-80 hover:opacity-100 cursor-pointer flex-none basis-[5em]">
+
+
+        </div>
+
+
+      </div>
+    </div>
+
+<!-- Modal -->
+<div id="modal" class="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center p-4 hidden z-1">
+
+  <!-- Modal Content -->
+  <div class="relative bg-white/10 border border-white/20 rounded-2xl p-6 shadow-2xl
+              w-full max-w-5xl flex flex-col md:flex-row gap-6 animate-[fadeIn_.3s_ease]">
+
+    <!-- Close Button -->
+    <button id="modal-close"
+      class="absolute top-3 right-3 text-white text-2xl hover:text-red-300 transition">
+      &times;
+    </button>
+
+    <!-- Image -->
+    <img id="modal-img"
+         class="w-full md:w-1/2 max-h-[70vh] object-contain rounded-xl shadow-lg"
+         src="" alt="Full Image">
+
+    <!-- Description (left side on desktop) -->
+    <div class="flex flex-col justify-center md:w-1/2">
+      <p id="modal-desc"
+         class="text-white text-left text-base sm:text-lg leading-relaxed">
+      </p>
+    </div>
+
+  </div>
+
+</div>
+
+
+
+
+    <!-- CONTACT PAGE -->
+    <div id="contact" class="min-h-[100dvh] flex flex-col lg:flex-row justify-center items-center 
+         gap-20 lg:gap-40 xl:gap-60 bg-[linear-gradient(130deg,#0a0a0a_0%,#1a1a1a_100%)] 
+         text-white px-6 py-16">
+
+      <!-- LEFT SIDE CONTENT -->
+      <div class="flex flex-col gap-y-10 max-w-[600px] text-center lg:text-left">
+        <h1 data-aos="fade-up" class="font-bold leading-tight
+           text-[36px] sm:text-[48px] md:text-[60px] lg:text-[75px] xl:text-[85px] z-0">
+          <i class="fa-solid fa-caret-left text-red-600
+            text-[28px] sm:text-[38px] md:text-[50px] lg:text-[65px] xl:text-[75px]"></i>
+          CONTACT ME
+        </h1>
+
+        <p class="leading-relaxed
+          text-[16px] sm:text-[17px] md:text-[19px] lg:text-[20px] max-w-[700px]">
+          I’m always open to new projects, collaborations, and creative ideas.
+          If you’re looking for a dedicated web developer to bring your vision
+          to life, feel free to reach out. I’m happy to connect!
+        </p>
+
+        <div class="flex justify-center lg:justify-start gap-x-4 text-red-600 text-4xl">
+          <a href="#"><i class="fa-brands fa-square-github hover:text-neutral-500 transition duration-300"></i></a>
+          <a href="#"><i class="fa-brands fa-linkedin hover:text-neutral-500 transition duration-300"></i></a>
+          <a href="#"><i class="fa-brands fa-square-upwork hover:text-neutral-500 transition duration-300"></i></a>
+          <a href="#"><i class="fa-brands fa-square-instagram hover:text-neutral-500 transition duration-300"></i></a>
+        </div>
+
+        <div class="space-y-4 text-[18px]">
+          <div>
+            <i class="fa-solid fa-phone text-red-600 mr-2"></i>
+            <span>+63 9925776995</span>
+          </div>
+          <div>
+            <i class="fa-solid fa-envelope text-red-600 mr-2"></i>
+            <span>kennethbrian@gmail.com</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT SIDE FORM-->
+      <form action="https://formspree.io/f/mrbowrnz" method="POST" class="w-full max-w-[400px] mt-12 lg:mt-0">
+        <div class="flex flex-col gap-y-6">
+          <input type="text" name="name" placeholder="Your Name" class="w-full h-12 bg-black/30 border border-white/20 rounded-md px-4 
+               text-white focus:outline-none focus:ring-2 focus:ring-red-600">
+
+          <input type="email" name="email" placeholder="Your Email" class="w-full h-12 bg-black/30 border border-white/20 rounded-md px-4 
+               text-white focus:outline-none focus:ring-2 focus:ring-red-600">
+
+          <input type="text" name="subject" placeholder="Your Subject" class="w-full h-12 bg-black/30 border border-white/20 rounded-md px-4 
+               text-white focus:outline-none focus:ring-2 focus:ring-red-600">
+
+          <textarea name="message" placeholder="Your Message" rows="5" class="w-full bg-black/30 border border-white/20 rounded-md px-4 py-2 
+               text-white focus:outline-none focus:ring-2 focus:ring-red-600"></textarea>
+
+          <button type="submit" class="bg-red-600 w-full hover:bg-neutral-700 text-white font-bold py-3 
+               rounded-md shadow-lg transition duration-300">
+            Send Message
+          </button>
+        </div>
+      </form>
+    </div>
+
+
+
+
+  </div>
+  <div class="h-12 bg-[#3B3B3B] flex items-center justify-center text-white">
+    <p>© 2025 Kenneth Brian Galletes — Portfolio Website</p>
+  </div>
+  <script>
+    AOS.init({
+      duration: 1000, // animation duration (ms)
+
+    });
+  </script>
+</body>
+
+</html>
+
+<!-- SIMPLE JS TOGGLE -->
+<script>
+  const menuBtn = document.getElementById('menu-btn');
+  const menu = document.getElementById('menu');
+  let open = false;
+
+  menuBtn.addEventListener('click', () => {
+    open = !open;
+    if (open) {
+      menu.classList.remove('max-[640px]:hidden');
+    } else {
+      menu.classList.add('max-[640px]:hidden');
+    }
+
+    // Change icon
+    menuBtn.innerHTML = open
+      ? '<i class="fa-solid fa-xmark"></i>'
+      : '<i class="fa-solid fa-bars"></i>';
+  });
+
+
+const images = document.querySelectorAll('img.cursor-pointer');
+const modal = document.getElementById('modal');
+const modalImg = document.getElementById('modal-img');
+const modalDesc = document.getElementById('modal-desc'); // <-- ADDED
+
+images.forEach(img => {
+  img.addEventListener('click', () => {
+    modal.classList.remove('hidden');
+    modalImg.src = img.src;
+    modalDesc.textContent = img.dataset.description || ""; // <-- ADDED
+  });
+});
+
+modal.addEventListener('click', () => {
+  modal.classList.add('hidden');
+  modalImg.src = '';
+  modalDesc.textContent = ""; // <-- ADDED
+});
+
+
+
+
+  function openVideoPopup() {
+    document.getElementById("videoPopup").classList.remove("hidden");
+  }
+
+  function closeVideoPopup() {
+    document.getElementById("videoPopup").classList.add("hidden");
+  }
+
+  function openCvPopup() {
+    document.getElementById("cvPopup").classList.remove("hidden");
+  }
+
+  function closeCvPopup() {
+    document.getElementById("cvPopup").classList.add("hidden");
+  }
+
+
+</script>
